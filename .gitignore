@@ -5,3 +5,9 @@
 /.vs
 /EInventory/.vs
 /EInventory/EInventory/obj
+/EInventory/UI/bin/Release/net10.0
+/EInventory/UI/obj/Release/net10.0
+/EInventory/UI/Properties/PublishProfiles
+/EInventory/UI/obj/Debug/net10.0/UI.AssemblyInfo.cs
+/EInventory/UI/obj/Debug/net10.0/UI.AssemblyInfoInputs.cache
+/EInventory/UI/UI.csproj.user
