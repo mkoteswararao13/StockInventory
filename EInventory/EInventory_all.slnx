@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EInventory/EInventory.csproj" />
+  <Project Path="UI/UI.csproj" />
+  <Project Path="Data/Data.csproj" />
+</Solution>

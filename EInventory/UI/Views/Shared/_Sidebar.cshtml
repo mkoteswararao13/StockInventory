@@ -1,0 +1,33 @@
+@using Microsoft.AspNetCore.Mvc.Routing
+<aside class="app-sidebar bg-light border-end" id="appSidebar">
+    <div class="sidebar-header p-3 d-flex align-items-center justify-content-between">
+        <div>
+            <div class="h5 mb-0">Inventory Mgmt</div>
+        </div>
+        <button id="sidebarToggle" class="btn btn-sm btn-outline-secondary" title="Toggle sidebar"><<</button>
+    </div>
+
+    <nav class="nav flex-column px-2">
+        <a class="nav-link d-flex align-items-center" asp-controller="Dashboard" asp-action="Index">
+            <span class="me-2">🏠</span> Dashboard
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="Operations" asp-action="Index">
+            <span class="me-2">📋</span> Operations
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="Contractors" asp-action="Index">
+            <span class="me-2">👷</span> Contractors
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="Products" asp-action="Index">
+            <span class="me-2">📦</span> Products
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="Merchants" asp-action="Index">
+            <span class="me-2">🏬</span> Merchants
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="InwardReceipts" asp-action="Index">
+            <span class="me-2">📥</span> Inward receipts
+        </a>
+        <a class="nav-link d-flex align-items-center" asp-controller="Settings" asp-action="Index">
+            <span class="me-2">⚙️</span> Settings
+        </a>
+    </nav>
+</aside>

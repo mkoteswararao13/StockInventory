@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Data/Data.csproj" />
   <Project Path="EInventory/EInventory.csproj" />
   <Project Path="UI/UI.csproj" />
 </Solution>

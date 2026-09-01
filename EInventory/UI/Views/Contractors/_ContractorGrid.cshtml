@@ -1,0 +1,45 @@
+@model List<Data.Models.Contractor>
+@{
+    var page = (int)(ViewData["Page"] ?? 1);
+    var pageSize = (int)(ViewData["PageSize"] ?? 10);
+    var total = (int)(ViewData["Total"] ?? 0);
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@(c.IsActive?"Active":"Inactive")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@c.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <form asp-action="Delete" asp-route-id="@c.Id" method="post" class="d-inline" onsubmit="return confirm('Delete contractor?');">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var totalPages = (int)Math.Ceiling((double)total / pageSize);
+}
+<nav>
+    <ul class="pagination">
+        @for(int i=1;i<=totalPages;i++){
+            <li class="page-item @(i==page?"active":"")">
+                <a class="page-link" href="javascript:loadContractorGrid(@i)">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
